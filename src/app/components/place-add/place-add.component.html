@@ -1,0 +1,54 @@
+<div class="content">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><h5 class="title">Mekan ekle</h5></div>
+            <div class="card-body">
+                <form [formGroup]="placeAddForm">
+                    <div class="mb-3">
+                        <label for="placeName">Mekan adı</label>
+                        <div class="form-group">
+                            <input type="text"
+                            id="placeName"
+                            formControlName="placeName" class="form-control"
+                            placeholder="Mekan adı"/>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="categoryId">Kategori</label>
+                        <div class="form-group">
+                            <input type="number"
+                            id="categoryId"
+                            formControlName="categoryId" class="form-control"
+                            placeholder="Kategori"/>
+                        </div>
+                    </div>
+                   <div class="mb-3">
+                    <label for="placeDescription">Mekanla ilgili kısa bilgi</label>
+                    <div class="form-group">
+                        <input type="text"
+                        id="placeDescription"
+                        formControlName="placeDescription" class="form-control"
+                        placeholder="Aciklama"/>
+                    </div>
+                   </div>
+                    <div  class="mb-3">
+                        <label for="placePrice">Kiralama Fiyatı</label>
+                        <div class="form-group">
+                            <input type="number"
+                            id="placePrice"
+                            formControlName="placePrice" class="form-control"
+                            placeholder="Fiyatı"/>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+             <div class="card-footer">
+                <button style ="background-color:rgb(245, 83, 83);border-color: gray;" class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>

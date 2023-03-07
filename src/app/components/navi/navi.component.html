@@ -1,0 +1,30 @@
+<nav   class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid" style ="background-color: rgb(234, 131, 131);border-color: gray;">
+    <a class="navbar-brand" href="#">Mekan Kiralama</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="login"><i class="bi bi-house-heart-fill"></i> Giriş Yap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/"><i class="fas fa-location-arrow"></i> Mekanlar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/places/add"><i class="fas fa-map-marked"></i> Mekan Ekle</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/category/add"><i class="fas fa-list"></i> Kategori Ekle</a>
+        </li>
+        
+        <app-cart-summary></app-cart-summary>
+      </ul>
+     <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>

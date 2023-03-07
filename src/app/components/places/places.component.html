@@ -1,0 +1,26 @@
+<div *ngIf="dataLoaded==false" class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+
+  <!--<div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <div class="input-group-text">Mekan adına göre ara </div>
+    </div>
+  <div *ngIf="filterText.length>4"class="alert alert-success">
+   {{filterText}} aradınız
+
+  </div> -->
+
+<br/>
+<div *ngFor="let place of places" class="card" style="background-color: #ffffff; width: 18rem; display: inline-block; margin-left: 8px; padding: 8px; box-sizing: border-box;">
+    <img style="max-width: 16rem;" [src]="place.coverImage"/>
+    <div  style="background-color: #ffffff " class="card-body">
+      <h5 class="card-title">{{place.placeName}}</h5>
+      <p class="card-text">{{place.placeDescription}}</p>
+      <a href="#"  routerLink="/place/detail/{{place.placeId}}" style ="background-color:rgb(245, 83, 83);border-color: gray;" class="btn btn-primary">Mekanı İncele</a>
+      <a href="#"    style="margin-left:5px;" style ="background-color: rgb(180, 18, 45);border-color: gray;" class="btn btn-primary">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-heart-fill" viewBox="0 0 16 16">
+        <path d="M2 15.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v13.5zM8 4.41c1.387-1.425 4.854 1.07 0 4.277C3.146 5.48 6.613 2.986 8 4.412z"/>
+      </svg>Favorile </a>
+      
+    </div>
+  </div>

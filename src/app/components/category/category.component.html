@@ -1,0 +1,13 @@
+<ul  class="list-group" >
+    <li style="background-color: #ead3c7 " 
+     [class]="getAllCategoryClass()" 
+     routerLink = "/places"   click = "selectAllCategory()"> Tüm Mekanlar </li>
+    <li style="background-color: #ead3c7 "
+     (click)="setCurrentCategory(category)"
+    routerLink="/places/category/{{category.categoryId}}"
+     *ngFor="let category of categories"
+    [class]="getCurrentCategoryClass(category)">{{category.categoryName}}</li>
+
+  </ul>
+
+ <h5 *ngIf="currentCategory">{{currentCategory.categoryName}} listeleniyor </h5>
